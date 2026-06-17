@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>register</title>
+    </head>
+    <body>
+        <h3>스프링부트 폼 전송</h3>
+        <h4>get전송</h4>
+        <form th:action="@{/sub2/param}" method="get">
+            <input type="text" name="name" placeholder="이름을 입렵하세요">
+            <input type="number" name="age" placeholder="나이를 입렵하세요">
+            <input type="submit" value="전송">
+        </form>
+
+
+        <h4>post전송</h4>
+        <form th:action="@{/sub2/register}" method="post">
+            <table border="1">
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="userid"></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td><input type="date" name="birth"></td>
+                </tr>
+                <tr>
+                    <td>나이</td>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right"><input type="submit" value="전송"></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
